@@ -1,0 +1,5 @@
+target/
+node_modules/
+*.log
+inventory/ffmpeg-filters.html
+inventory/imgproc.hpp

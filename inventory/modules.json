@@ -1,0 +1,4429 @@
+{
+  "summary": {
+    "total": 486,
+    "registeredUnverified": 66,
+    "catalogued": 420,
+    "byCategory": {
+      "analysis": 13,
+      "binary / morphology": 10,
+      "blend": 35,
+      "blur / sharpen": 25,
+      "colour / tone": 50,
+      "composite / geometry": 43,
+      "draw / text": 26,
+      "edge / detail": 12,
+      "motion / tracking": 5,
+      "noise": 11,
+      "other": 256
+    },
+    "sourceLicences": {
+      "ffmpeg": "concept only (ffmpeg docs, LGPL-2.1-or-later / GPL-2-or-later)",
+      "opencv": "concept only (Apache-2.0 header)",
+      "w3c": "specification (W3C)",
+      "registry": "MIT (this repo)"
+    },
+    "sources": {
+      "ffmpeg": "https://ffmpeg.org/ffmpeg-filters.html",
+      "opencv": "https://github.com/opencv/opencv/blob/4.x/modules/imgproc/include/opencv2/imgproc.hpp",
+      "w3c": "https://www.w3.org/TR/compositing-1/",
+      "registry": "src/lib.rs"
+    }
+  },
+  "modules": [
+    {
+      "module": "buildpyramid",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cornereigenvalsandvecs",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cornerharris",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cornermineigenval",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cornersubpix",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "creategeneralizedhoughballard",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "creategeneralizedhoughguil",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "goodfeaturestotrack",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "precornerdetect",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pyrdown",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pyrmeanshiftfiltering",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pyrup",
+      "category": "analysis",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "stereo3d",
+      "category": "analysis",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "adaptivethreshold",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dilate",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dilate3x3",
+      "category": "binary / morphology",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "erode",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "erode3x3",
+      "category": "binary / morphology",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "morpho",
+      "category": "binary / morphology",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "morphologyex",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "spatialgradient",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "threshold",
+      "category": "binary / morphology",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg",
+        "opencv"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "watershed",
+      "category": "binary / morphology",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_average",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_burn",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_darken",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_darken_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_difference",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_difference_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_dodge",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_exclusion",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_hard_light",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_hard_light_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_hardlight",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_hardmix",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_lighten",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_lighten_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_luminosity",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_multiply",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_multiply_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_normal",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_overlay",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_overlay_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_pinlight",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_plus_lighter",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_soft_light",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_soft_light_legacy",
+      "category": "blend",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_softlight",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_vividlight",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "channel_mixer",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "mix",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "overlay",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "premultiply",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "premultiply_dynamic",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tblend",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tmix",
+      "category": "blend",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "unpremultiply",
+      "category": "blend",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "avgblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "bilateral",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "bilateralfilter",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blur",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blur3x3",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blurdetect",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "box_blur",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "boxblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "gaussian_blur",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "gaussianblur",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "gblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getgaussiankernel",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "guided",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "median",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "median3x3",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "medianblur",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "motion_blur_h",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "noise_gaussian",
+      "category": "blur / sharpen",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "smartblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "stackblur",
+      "category": "blur / sharpen",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tmedian",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "varblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xmedian",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "yaepblur",
+      "category": "blur / sharpen",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "applycolormap",
+      "category": "colour / tone",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "black_white",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_color",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_color_burn",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_color_burn_legacy",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_color_dodge",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_color_dodge_legacy",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_hue",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_saturation",
+      "category": "colour / tone",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "color_balance",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "colorbalance",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorchannelmixer",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorcontrast",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorcorrect",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colordetect",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorhold",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorize",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorlevels",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colormap",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colormatrix",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorspace",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colortemperature",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "curves",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cvtcolor",
+      "category": "colour / tone",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cvtcolortwoplane",
+      "category": "colour / tone",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "eq",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "equalize",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "equalizehist",
+      "category": "colour / tone",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "exposure",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "gamma",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "geq",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "haldclut",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "histeq",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "histogram",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hue",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "huesaturation",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "levels",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "levels_rgb",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "lut_rgb",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "lut1d",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "lut3d",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "midequalizer",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pseudocolor",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "saturate",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "selectivecolor",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "temperature",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "thistogram",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tmidequalizer",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tonemap",
+      "category": "colour / tone",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vibrance",
+      "category": "colour / tone",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "alphaextract",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "alphamerge",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "backgroundkey",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "chroma_key_near",
+      "category": "composite / geometry",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "chromahold",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "chromakey",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "chromanr",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "chromashift",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "colorkey",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "crop",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cropdetect",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getaffinetransform",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getfontscalefromheight",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getperspectivetransform",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "grayscale_luma",
+      "category": "composite / geometry",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "grayscale_luminosity",
+      "category": "composite / geometry",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "hflip",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hsvkey",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hue_rotate",
+      "category": "composite / geometry",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "invertaffinetransform",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "luma_key",
+      "category": "composite / geometry",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "lumakey",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskedclamp",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskedmax",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskedmerge",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskedmin",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskedthreshold",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "maskfun",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pad",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "perspective",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "remap",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg",
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "resize",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "rotate",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "rotatedrectangleintersection",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "scale",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "thresholdwithmask",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tpad",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "transpose",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vflip",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "warpaffine",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "warpperspective",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "warppolar",
+      "category": "composite / geometry",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "zscale",
+      "category": "composite / geometry",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "arrowedline",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_linearlight",
+      "category": "draw / text",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blendlinear",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "circle",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "clipline",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "createlinesegmentdetector",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawbox",
+      "category": "draw / text",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawtext",
+      "category": "draw / text",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ellipse",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ellipse2poly",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fitellipse",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fitellipseams",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fitellipsedirect",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fitline",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getclosestellipsepoints",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "gettextsize",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "houghcircles",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "houghlines",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "houghlinesp",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "houghlinespointset",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "line",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "linearpolar",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "minenclosingcircle",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "polylines",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "puttext",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "rectangle",
+      "category": "draw / text",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "canny",
+      "category": "edge / detail",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "convolution",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "convolve",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deconvolve",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "kirsch",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "laplacian",
+      "category": "edge / detail",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "opencv"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "sharpen3x3",
+      "category": "edge / detail",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "sobel",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg",
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sobel_x",
+      "category": "edge / detail",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "sobel_y",
+      "category": "edge / detail",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "unsharp",
+      "category": "edge / detail",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "unsharp_mask",
+      "category": "edge / detail",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "calcbackproject",
+      "category": "motion / tracking",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "displace",
+      "category": "motion / tracking",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vidstabdetect",
+      "category": "motion / tracking",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vidstabtransform",
+      "category": "motion / tracking",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vmafmotion",
+      "category": "motion / tracking",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "atadenoise",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "bitplanenoise",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blend_screen",
+      "category": "noise",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "w3c"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "blend_screen_legacy",
+      "category": "noise",
+      "analogue": "PS / AE blend mode",
+      "sources": [
+        "w3c"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dither_bayer4",
+      "category": "noise",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "nlmeans",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "noise",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "noise_uniform",
+      "category": "noise",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "owdenoise",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "removegrain",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vaguedenoiser",
+      "category": "noise",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "accumulate",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "accumulateproduct",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "accumulatesquare",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "accumulateweighted",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "addroi",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "amplify",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "approxpolydp",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "approxpolyn",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "arclength",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ass",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "bbox",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blackframe",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "blockdetect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "bm3d",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "boundingrect",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "boxfilter",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "boxpoints",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "brightness",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "brightness_contrast",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "bwdif",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "calchist",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cas",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ccrepack",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ciescope",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "codecview",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "comparehist",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "connectedcomponents",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "connectedcomponentswithstats",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "contourarea",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "contrast",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "convertmaps",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "convexhull",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "convexitydefects",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "copy",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "coreimage",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "corr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cover_rect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "createclahe",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "createhanningwindow",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cue",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "cv_wrap_as",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "datascope",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dctdnoiz",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deband",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deblock",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "decimate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dedot",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deflate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deflicker",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deinterlace_d3d12",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dejudder",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "delogo",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "demosaicing",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "derain",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "deshake",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "despill",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "detelecine",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dilation",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "distancetransform",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "divspectrums",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dnn_classify",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dnn_detect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "dnn_processing",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawcontours",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawgraph",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawgrid",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawmarker",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "drawvg",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "edgedetect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "elbg",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "emboss",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "emd",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "entropy",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "epx",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "erosion",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "estdif",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "extractplanes",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fade",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "feedback",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fftdnoiz",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fftfilt",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "field",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fieldhint",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fieldmatch",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fieldorder",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fillborders",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fillconvexpoly",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fillpoly",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "filter2d",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "find_rect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "findcontours",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "findcontourslinkruns",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "floodfill",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg",
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "format",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fps",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "framepack",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "framerate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "framestep",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "frc_amf",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "freezedetect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "freezeframes",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "frei0r",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fspp",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "fsync",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getderivkernels",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getgaborkernel",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getrectsubpix",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getrotationmatrix2d",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getrotationmatrix2d_",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "getstructuringelement",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "grabcut",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "gradfun",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "graphmonitor",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "grayworld",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "greyedge",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "high_pass",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "hqdn3d",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hqx",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hstack",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hsvhold",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "humoments",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hwdownload",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hwmap",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hwupload",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hwupload_cuda",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "hysteresis",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "iccdetect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "iccgen",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "identity",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "idet",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "il",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "inflate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "integral",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "intersectconvexconvex",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "invert",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "iscontourconvex",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "kerndeint",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "lagfun",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "latticepal",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "lcevc",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "lenscorrection",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "lensfun",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "libplacebo",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "libvmaf",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "libvmaf_cuda",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "limitdiff",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "limiter",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "logpolar",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "loop",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "matchshapes",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "matchtemplate",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "mcdeint",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "mergeplanes",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "mestimate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "mestimate_d3d12",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "minarearect",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "minenclosingconvexpolygon",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "minenclosingtriangle",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "minterpolate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "moments",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "monochrome",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "mpdecimate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "msad",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "multiply",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "negate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "nnedi",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "noformat",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "normalize",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "normalize_stretch",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "null",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ocio",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ocr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ocv",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "oscilloscope",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "palettegen",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "paletteuse",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "phase",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "phasecorrelate",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "phasecorrelateiterative",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "photosensitivity",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pixdesctest",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pixelate",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "pixelize",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pixscope",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pointpolygontest",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "posterize",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "pp7",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "prewitt",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "psnr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "pullup",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "qp",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "qrencode",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "quirc",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "random",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "readeia608",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "readvitc",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "removelogo",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "repeatfields",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "reverse",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "rgbashift",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "roberts",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sab",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "scdet",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "scharr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg",
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "scroll",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "separatefields",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sepfilter2d",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sepia",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "setfield",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "setparams",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "shear",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "showinfo",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "showpalette",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "shuffleframes",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "shufflepixels",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "shuffleplanes",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "signalstats",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "signature",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "siti",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "solarize",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "spp",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sqrboxfilter",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "sr_amf",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "ssim",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "subtitles",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "super2xsai",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "swaprect",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "swapuv",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "telecine",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "thumbnail",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tile",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tiltandshift",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "tint",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "tinterlace",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "trim",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "untile",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "uspp",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "v360",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vectorscope",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vfrdet",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vif",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vignette",
+      "category": "other",
+      "analogue": "this crate",
+      "sources": [
+        "registry",
+        "ffmpeg"
+      ],
+      "status": "registered_unverified"
+    },
+    {
+      "module": "vpp_amf",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vqe_amf",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "vstack",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "w3fdif",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "waveform",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "wrapperemd",
+      "category": "other",
+      "analogue": "OpenCV imgproc function",
+      "sources": [
+        "opencv"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xbr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xcorrelate",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xfade",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xpsnr",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "xstack",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "yadif",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    },
+    {
+      "module": "zoompan",
+      "category": "other",
+      "analogue": "ffmpeg video filter",
+      "sources": [
+        "ffmpeg"
+      ],
+      "status": "catalogued"
+    }
+  ]
+}

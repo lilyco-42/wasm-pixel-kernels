@@ -1,0 +1,487 @@
+module,category,analogue,sources,status
+buildpyramid,"analysis","OpenCV imgproc function","opencv",catalogued
+cornereigenvalsandvecs,"analysis","OpenCV imgproc function","opencv",catalogued
+cornerharris,"analysis","OpenCV imgproc function","opencv",catalogued
+cornermineigenval,"analysis","OpenCV imgproc function","opencv",catalogued
+cornersubpix,"analysis","OpenCV imgproc function","opencv",catalogued
+creategeneralizedhoughballard,"analysis","OpenCV imgproc function","opencv",catalogued
+creategeneralizedhoughguil,"analysis","OpenCV imgproc function","opencv",catalogued
+goodfeaturestotrack,"analysis","OpenCV imgproc function","opencv",catalogued
+precornerdetect,"analysis","OpenCV imgproc function","opencv",catalogued
+pyrdown,"analysis","OpenCV imgproc function","opencv",catalogued
+pyrmeanshiftfiltering,"analysis","OpenCV imgproc function","opencv",catalogued
+pyrup,"analysis","OpenCV imgproc function","opencv",catalogued
+stereo3d,"analysis","ffmpeg video filter","ffmpeg",catalogued
+adaptivethreshold,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+dilate,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+dilate3x3,"binary / morphology","this crate","registry",registered_unverified
+erode,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+erode3x3,"binary / morphology","this crate","registry",registered_unverified
+morpho,"binary / morphology","ffmpeg video filter","ffmpeg",catalogued
+morphologyex,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+spatialgradient,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+threshold,"binary / morphology","this crate","registry|ffmpeg|opencv",registered_unverified
+watershed,"binary / morphology","OpenCV imgproc function","opencv",catalogued
+blend,"blend","ffmpeg video filter","ffmpeg",catalogued
+blend_average,"blend","this crate","registry",registered_unverified
+blend_burn,"blend","this crate","registry",registered_unverified
+blend_darken,"blend","this crate","registry|w3c",registered_unverified
+blend_darken_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_difference,"blend","this crate","registry|w3c",registered_unverified
+blend_difference_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_dodge,"blend","this crate","registry",registered_unverified
+blend_exclusion,"blend","this crate","registry|w3c",registered_unverified
+blend_hard_light,"blend","PS / AE blend mode","w3c",catalogued
+blend_hard_light_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_hardlight,"blend","this crate","registry",registered_unverified
+blend_hardmix,"blend","this crate","registry",registered_unverified
+blend_lighten,"blend","this crate","registry|w3c",registered_unverified
+blend_lighten_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_luminosity,"blend","PS / AE blend mode","w3c",catalogued
+blend_multiply,"blend","this crate","registry|w3c",registered_unverified
+blend_multiply_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_normal,"blend","PS / AE blend mode","w3c",catalogued
+blend_overlay,"blend","this crate","registry|w3c",registered_unverified
+blend_overlay_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_pinlight,"blend","this crate","registry",registered_unverified
+blend_plus_lighter,"blend","this crate","registry|w3c",registered_unverified
+blend_soft_light,"blend","PS / AE blend mode","w3c",catalogued
+blend_soft_light_legacy,"blend","PS / AE blend mode","w3c",catalogued
+blend_softlight,"blend","this crate","registry",registered_unverified
+blend_vividlight,"blend","this crate","registry",registered_unverified
+channel_mixer,"blend","this crate","registry",registered_unverified
+mix,"blend","ffmpeg video filter","ffmpeg",catalogued
+overlay,"blend","ffmpeg video filter","ffmpeg",catalogued
+premultiply,"blend","this crate","registry|ffmpeg",registered_unverified
+premultiply_dynamic,"blend","ffmpeg video filter","ffmpeg",catalogued
+tblend,"blend","ffmpeg video filter","ffmpeg",catalogued
+tmix,"blend","ffmpeg video filter","ffmpeg",catalogued
+unpremultiply,"blend","this crate","registry|ffmpeg",registered_unverified
+avgblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+bilateral,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+bilateralfilter,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+blur,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+blur3x3,"blur / sharpen","this crate","registry",registered_unverified
+blurdetect,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+box_blur,"blur / sharpen","this crate","registry",registered_unverified
+boxblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+dblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+gaussian_blur,"blur / sharpen","this crate","registry",registered_unverified
+gaussianblur,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+gblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+getgaussiankernel,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+guided,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+median,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+median3x3,"blur / sharpen","this crate","registry",registered_unverified
+medianblur,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+motion_blur_h,"blur / sharpen","this crate","registry",registered_unverified
+noise_gaussian,"blur / sharpen","this crate","registry",registered_unverified
+smartblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+stackblur,"blur / sharpen","OpenCV imgproc function","opencv",catalogued
+tmedian,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+varblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+xmedian,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+yaepblur,"blur / sharpen","ffmpeg video filter","ffmpeg",catalogued
+applycolormap,"colour / tone","OpenCV imgproc function","opencv",catalogued
+black_white,"colour / tone","this crate","registry",registered_unverified
+blend_color,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_color_burn,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_color_burn_legacy,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_color_dodge,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_color_dodge_legacy,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_hue,"colour / tone","PS / AE blend mode","w3c",catalogued
+blend_saturation,"colour / tone","PS / AE blend mode","w3c",catalogued
+color_balance,"colour / tone","this crate","registry",registered_unverified
+colorbalance,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorchannelmixer,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorcontrast,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorcorrect,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colordetect,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorhold,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorize,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorlevels,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colormap,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colormatrix,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colorspace,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+colortemperature,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+curves,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+cvtcolor,"colour / tone","OpenCV imgproc function","opencv",catalogued
+cvtcolortwoplane,"colour / tone","OpenCV imgproc function","opencv",catalogued
+eq,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+equalize,"colour / tone","this crate","registry",registered_unverified
+equalizehist,"colour / tone","OpenCV imgproc function","opencv",catalogued
+exposure,"colour / tone","this crate","registry|ffmpeg",registered_unverified
+gamma,"colour / tone","this crate","registry",registered_unverified
+geq,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+haldclut,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+histeq,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+histogram,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+hue,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+huesaturation,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+levels,"colour / tone","this crate","registry",registered_unverified
+levels_rgb,"colour / tone","this crate","registry",registered_unverified
+lut_rgb,"colour / tone","this crate","registry",registered_unverified
+lut1d,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+lut3d,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+midequalizer,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+pseudocolor,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+saturate,"colour / tone","this crate","registry",registered_unverified
+selectivecolor,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+temperature,"colour / tone","this crate","registry",registered_unverified
+thistogram,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+tmidequalizer,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+tonemap,"colour / tone","ffmpeg video filter","ffmpeg",catalogued
+vibrance,"colour / tone","this crate","registry|ffmpeg",registered_unverified
+alphaextract,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+alphamerge,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+backgroundkey,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+chroma_key_near,"composite / geometry","this crate","registry",registered_unverified
+chromahold,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+chromakey,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+chromanr,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+chromashift,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+colorkey,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+crop,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+cropdetect,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+getaffinetransform,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+getfontscalefromheight,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+getperspectivetransform,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+grayscale_luma,"composite / geometry","this crate","registry",registered_unverified
+grayscale_luminosity,"composite / geometry","this crate","registry",registered_unverified
+hflip,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+hsvkey,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+hue_rotate,"composite / geometry","this crate","registry",registered_unverified
+invertaffinetransform,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+luma_key,"composite / geometry","this crate","registry",registered_unverified
+lumakey,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskedclamp,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskedmax,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskedmerge,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskedmin,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskedthreshold,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+maskfun,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+pad,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+perspective,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+remap,"composite / geometry","ffmpeg video filter","ffmpeg|opencv",catalogued
+resize,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+rotate,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+rotatedrectangleintersection,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+scale,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+thresholdwithmask,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+tpad,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+transpose,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+vflip,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+warpaffine,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+warpperspective,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+warppolar,"composite / geometry","OpenCV imgproc function","opencv",catalogued
+zscale,"composite / geometry","ffmpeg video filter","ffmpeg",catalogued
+arrowedline,"draw / text","OpenCV imgproc function","opencv",catalogued
+blend_linearlight,"draw / text","this crate","registry",registered_unverified
+blendlinear,"draw / text","OpenCV imgproc function","opencv",catalogued
+circle,"draw / text","OpenCV imgproc function","opencv",catalogued
+clipline,"draw / text","OpenCV imgproc function","opencv",catalogued
+createlinesegmentdetector,"draw / text","OpenCV imgproc function","opencv",catalogued
+drawbox,"draw / text","ffmpeg video filter","ffmpeg",catalogued
+drawtext,"draw / text","ffmpeg video filter","ffmpeg",catalogued
+ellipse,"draw / text","OpenCV imgproc function","opencv",catalogued
+ellipse2poly,"draw / text","OpenCV imgproc function","opencv",catalogued
+fitellipse,"draw / text","OpenCV imgproc function","opencv",catalogued
+fitellipseams,"draw / text","OpenCV imgproc function","opencv",catalogued
+fitellipsedirect,"draw / text","OpenCV imgproc function","opencv",catalogued
+fitline,"draw / text","OpenCV imgproc function","opencv",catalogued
+getclosestellipsepoints,"draw / text","OpenCV imgproc function","opencv",catalogued
+gettextsize,"draw / text","OpenCV imgproc function","opencv",catalogued
+houghcircles,"draw / text","OpenCV imgproc function","opencv",catalogued
+houghlines,"draw / text","OpenCV imgproc function","opencv",catalogued
+houghlinesp,"draw / text","OpenCV imgproc function","opencv",catalogued
+houghlinespointset,"draw / text","OpenCV imgproc function","opencv",catalogued
+line,"draw / text","OpenCV imgproc function","opencv",catalogued
+linearpolar,"draw / text","OpenCV imgproc function","opencv",catalogued
+minenclosingcircle,"draw / text","OpenCV imgproc function","opencv",catalogued
+polylines,"draw / text","OpenCV imgproc function","opencv",catalogued
+puttext,"draw / text","OpenCV imgproc function","opencv",catalogued
+rectangle,"draw / text","OpenCV imgproc function","opencv",catalogued
+canny,"edge / detail","OpenCV imgproc function","opencv",catalogued
+convolution,"edge / detail","ffmpeg video filter","ffmpeg",catalogued
+convolve,"edge / detail","ffmpeg video filter","ffmpeg",catalogued
+deconvolve,"edge / detail","ffmpeg video filter","ffmpeg",catalogued
+kirsch,"edge / detail","ffmpeg video filter","ffmpeg",catalogued
+laplacian,"edge / detail","this crate","registry|opencv",registered_unverified
+sharpen3x3,"edge / detail","this crate","registry",registered_unverified
+sobel,"edge / detail","ffmpeg video filter","ffmpeg|opencv",catalogued
+sobel_x,"edge / detail","this crate","registry",registered_unverified
+sobel_y,"edge / detail","this crate","registry",registered_unverified
+unsharp,"edge / detail","ffmpeg video filter","ffmpeg",catalogued
+unsharp_mask,"edge / detail","this crate","registry",registered_unverified
+calcbackproject,"motion / tracking","OpenCV imgproc function","opencv",catalogued
+displace,"motion / tracking","ffmpeg video filter","ffmpeg",catalogued
+vidstabdetect,"motion / tracking","ffmpeg video filter","ffmpeg",catalogued
+vidstabtransform,"motion / tracking","ffmpeg video filter","ffmpeg",catalogued
+vmafmotion,"motion / tracking","ffmpeg video filter","ffmpeg",catalogued
+atadenoise,"noise","ffmpeg video filter","ffmpeg",catalogued
+bitplanenoise,"noise","ffmpeg video filter","ffmpeg",catalogued
+blend_screen,"noise","this crate","registry|w3c",registered_unverified
+blend_screen_legacy,"noise","PS / AE blend mode","w3c",catalogued
+dither_bayer4,"noise","this crate","registry",registered_unverified
+nlmeans,"noise","ffmpeg video filter","ffmpeg",catalogued
+noise,"noise","ffmpeg video filter","ffmpeg",catalogued
+noise_uniform,"noise","this crate","registry",registered_unverified
+owdenoise,"noise","ffmpeg video filter","ffmpeg",catalogued
+removegrain,"noise","ffmpeg video filter","ffmpeg",catalogued
+vaguedenoiser,"noise","ffmpeg video filter","ffmpeg",catalogued
+accumulate,"other","OpenCV imgproc function","opencv",catalogued
+accumulateproduct,"other","OpenCV imgproc function","opencv",catalogued
+accumulatesquare,"other","OpenCV imgproc function","opencv",catalogued
+accumulateweighted,"other","OpenCV imgproc function","opencv",catalogued
+addroi,"other","ffmpeg video filter","ffmpeg",catalogued
+amplify,"other","ffmpeg video filter","ffmpeg",catalogued
+approxpolydp,"other","OpenCV imgproc function","opencv",catalogued
+approxpolyn,"other","OpenCV imgproc function","opencv",catalogued
+arclength,"other","OpenCV imgproc function","opencv",catalogued
+ass,"other","ffmpeg video filter","ffmpeg",catalogued
+bbox,"other","ffmpeg video filter","ffmpeg",catalogued
+blackframe,"other","ffmpeg video filter","ffmpeg",catalogued
+blockdetect,"other","ffmpeg video filter","ffmpeg",catalogued
+bm3d,"other","ffmpeg video filter","ffmpeg",catalogued
+boundingrect,"other","OpenCV imgproc function","opencv",catalogued
+boxfilter,"other","OpenCV imgproc function","opencv",catalogued
+boxpoints,"other","OpenCV imgproc function","opencv",catalogued
+brightness,"other","this crate","registry",registered_unverified
+brightness_contrast,"other","this crate","registry",registered_unverified
+bwdif,"other","ffmpeg video filter","ffmpeg",catalogued
+calchist,"other","OpenCV imgproc function","opencv",catalogued
+cas,"other","ffmpeg video filter","ffmpeg",catalogued
+ccrepack,"other","ffmpeg video filter","ffmpeg",catalogued
+ciescope,"other","ffmpeg video filter","ffmpeg",catalogued
+codecview,"other","ffmpeg video filter","ffmpeg",catalogued
+comparehist,"other","OpenCV imgproc function","opencv",catalogued
+connectedcomponents,"other","OpenCV imgproc function","opencv",catalogued
+connectedcomponentswithstats,"other","OpenCV imgproc function","opencv",catalogued
+contourarea,"other","OpenCV imgproc function","opencv",catalogued
+contrast,"other","this crate","registry",registered_unverified
+convertmaps,"other","OpenCV imgproc function","opencv",catalogued
+convexhull,"other","OpenCV imgproc function","opencv",catalogued
+convexitydefects,"other","OpenCV imgproc function","opencv",catalogued
+copy,"other","ffmpeg video filter","ffmpeg",catalogued
+coreimage,"other","ffmpeg video filter","ffmpeg",catalogued
+corr,"other","ffmpeg video filter","ffmpeg",catalogued
+cover_rect,"other","ffmpeg video filter","ffmpeg",catalogued
+createclahe,"other","OpenCV imgproc function","opencv",catalogued
+createhanningwindow,"other","OpenCV imgproc function","opencv",catalogued
+cue,"other","ffmpeg video filter","ffmpeg",catalogued
+cv_wrap_as,"other","OpenCV imgproc function","opencv",catalogued
+datascope,"other","ffmpeg video filter","ffmpeg",catalogued
+dctdnoiz,"other","ffmpeg video filter","ffmpeg",catalogued
+deband,"other","ffmpeg video filter","ffmpeg",catalogued
+deblock,"other","ffmpeg video filter","ffmpeg",catalogued
+decimate,"other","ffmpeg video filter","ffmpeg",catalogued
+dedot,"other","ffmpeg video filter","ffmpeg",catalogued
+deflate,"other","ffmpeg video filter","ffmpeg",catalogued
+deflicker,"other","ffmpeg video filter","ffmpeg",catalogued
+deinterlace_d3d12,"other","ffmpeg video filter","ffmpeg",catalogued
+dejudder,"other","ffmpeg video filter","ffmpeg",catalogued
+delogo,"other","ffmpeg video filter","ffmpeg",catalogued
+demosaicing,"other","OpenCV imgproc function","opencv",catalogued
+derain,"other","ffmpeg video filter","ffmpeg",catalogued
+deshake,"other","ffmpeg video filter","ffmpeg",catalogued
+despill,"other","ffmpeg video filter","ffmpeg",catalogued
+detelecine,"other","ffmpeg video filter","ffmpeg",catalogued
+dilation,"other","ffmpeg video filter","ffmpeg",catalogued
+distancetransform,"other","OpenCV imgproc function","opencv",catalogued
+divspectrums,"other","OpenCV imgproc function","opencv",catalogued
+dnn_classify,"other","ffmpeg video filter","ffmpeg",catalogued
+dnn_detect,"other","ffmpeg video filter","ffmpeg",catalogued
+dnn_processing,"other","ffmpeg video filter","ffmpeg",catalogued
+drawcontours,"other","OpenCV imgproc function","opencv",catalogued
+drawgraph,"other","ffmpeg video filter","ffmpeg",catalogued
+drawgrid,"other","ffmpeg video filter","ffmpeg",catalogued
+drawmarker,"other","OpenCV imgproc function","opencv",catalogued
+drawvg,"other","ffmpeg video filter","ffmpeg",catalogued
+edgedetect,"other","ffmpeg video filter","ffmpeg",catalogued
+elbg,"other","ffmpeg video filter","ffmpeg",catalogued
+emboss,"other","this crate","registry",registered_unverified
+emd,"other","OpenCV imgproc function","opencv",catalogued
+entropy,"other","ffmpeg video filter","ffmpeg",catalogued
+epx,"other","ffmpeg video filter","ffmpeg",catalogued
+erosion,"other","ffmpeg video filter","ffmpeg",catalogued
+estdif,"other","ffmpeg video filter","ffmpeg",catalogued
+extractplanes,"other","ffmpeg video filter","ffmpeg",catalogued
+fade,"other","ffmpeg video filter","ffmpeg",catalogued
+feedback,"other","ffmpeg video filter","ffmpeg",catalogued
+fftdnoiz,"other","ffmpeg video filter","ffmpeg",catalogued
+fftfilt,"other","ffmpeg video filter","ffmpeg",catalogued
+field,"other","ffmpeg video filter","ffmpeg",catalogued
+fieldhint,"other","ffmpeg video filter","ffmpeg",catalogued
+fieldmatch,"other","ffmpeg video filter","ffmpeg",catalogued
+fieldorder,"other","ffmpeg video filter","ffmpeg",catalogued
+fillborders,"other","ffmpeg video filter","ffmpeg",catalogued
+fillconvexpoly,"other","OpenCV imgproc function","opencv",catalogued
+fillpoly,"other","OpenCV imgproc function","opencv",catalogued
+filter2d,"other","OpenCV imgproc function","opencv",catalogued
+find_rect,"other","ffmpeg video filter","ffmpeg",catalogued
+findcontours,"other","OpenCV imgproc function","opencv",catalogued
+findcontourslinkruns,"other","OpenCV imgproc function","opencv",catalogued
+floodfill,"other","ffmpeg video filter","ffmpeg|opencv",catalogued
+format,"other","ffmpeg video filter","ffmpeg",catalogued
+fps,"other","ffmpeg video filter","ffmpeg",catalogued
+framepack,"other","ffmpeg video filter","ffmpeg",catalogued
+framerate,"other","ffmpeg video filter","ffmpeg",catalogued
+framestep,"other","ffmpeg video filter","ffmpeg",catalogued
+frc_amf,"other","ffmpeg video filter","ffmpeg",catalogued
+freezedetect,"other","ffmpeg video filter","ffmpeg",catalogued
+freezeframes,"other","ffmpeg video filter","ffmpeg",catalogued
+frei0r,"other","ffmpeg video filter","ffmpeg",catalogued
+fspp,"other","ffmpeg video filter","ffmpeg",catalogued
+fsync,"other","ffmpeg video filter","ffmpeg",catalogued
+getderivkernels,"other","OpenCV imgproc function","opencv",catalogued
+getgaborkernel,"other","OpenCV imgproc function","opencv",catalogued
+getrectsubpix,"other","OpenCV imgproc function","opencv",catalogued
+getrotationmatrix2d,"other","OpenCV imgproc function","opencv",catalogued
+getrotationmatrix2d_,"other","OpenCV imgproc function","opencv",catalogued
+getstructuringelement,"other","OpenCV imgproc function","opencv",catalogued
+grabcut,"other","OpenCV imgproc function","opencv",catalogued
+gradfun,"other","ffmpeg video filter","ffmpeg",catalogued
+graphmonitor,"other","ffmpeg video filter","ffmpeg",catalogued
+grayworld,"other","ffmpeg video filter","ffmpeg",catalogued
+greyedge,"other","ffmpeg video filter","ffmpeg",catalogued
+high_pass,"other","this crate","registry",registered_unverified
+hqdn3d,"other","ffmpeg video filter","ffmpeg",catalogued
+hqx,"other","ffmpeg video filter","ffmpeg",catalogued
+hstack,"other","ffmpeg video filter","ffmpeg",catalogued
+hsvhold,"other","ffmpeg video filter","ffmpeg",catalogued
+humoments,"other","OpenCV imgproc function","opencv",catalogued
+hwdownload,"other","ffmpeg video filter","ffmpeg",catalogued
+hwmap,"other","ffmpeg video filter","ffmpeg",catalogued
+hwupload,"other","ffmpeg video filter","ffmpeg",catalogued
+hwupload_cuda,"other","ffmpeg video filter","ffmpeg",catalogued
+hysteresis,"other","ffmpeg video filter","ffmpeg",catalogued
+iccdetect,"other","ffmpeg video filter","ffmpeg",catalogued
+iccgen,"other","ffmpeg video filter","ffmpeg",catalogued
+identity,"other","this crate","registry|ffmpeg",registered_unverified
+idet,"other","ffmpeg video filter","ffmpeg",catalogued
+il,"other","ffmpeg video filter","ffmpeg",catalogued
+inflate,"other","ffmpeg video filter","ffmpeg",catalogued
+integral,"other","OpenCV imgproc function","opencv",catalogued
+intersectconvexconvex,"other","OpenCV imgproc function","opencv",catalogued
+invert,"other","this crate","registry",registered_unverified
+iscontourconvex,"other","OpenCV imgproc function","opencv",catalogued
+kerndeint,"other","ffmpeg video filter","ffmpeg",catalogued
+lagfun,"other","ffmpeg video filter","ffmpeg",catalogued
+latticepal,"other","ffmpeg video filter","ffmpeg",catalogued
+lcevc,"other","ffmpeg video filter","ffmpeg",catalogued
+lenscorrection,"other","ffmpeg video filter","ffmpeg",catalogued
+lensfun,"other","ffmpeg video filter","ffmpeg",catalogued
+libplacebo,"other","ffmpeg video filter","ffmpeg",catalogued
+libvmaf,"other","ffmpeg video filter","ffmpeg",catalogued
+libvmaf_cuda,"other","ffmpeg video filter","ffmpeg",catalogued
+limitdiff,"other","ffmpeg video filter","ffmpeg",catalogued
+limiter,"other","ffmpeg video filter","ffmpeg",catalogued
+logpolar,"other","OpenCV imgproc function","opencv",catalogued
+loop,"other","ffmpeg video filter","ffmpeg",catalogued
+matchshapes,"other","OpenCV imgproc function","opencv",catalogued
+matchtemplate,"other","OpenCV imgproc function","opencv",catalogued
+mcdeint,"other","ffmpeg video filter","ffmpeg",catalogued
+mergeplanes,"other","ffmpeg video filter","ffmpeg",catalogued
+mestimate,"other","ffmpeg video filter","ffmpeg",catalogued
+mestimate_d3d12,"other","ffmpeg video filter","ffmpeg",catalogued
+minarearect,"other","OpenCV imgproc function","opencv",catalogued
+minenclosingconvexpolygon,"other","OpenCV imgproc function","opencv",catalogued
+minenclosingtriangle,"other","OpenCV imgproc function","opencv",catalogued
+minterpolate,"other","ffmpeg video filter","ffmpeg",catalogued
+moments,"other","OpenCV imgproc function","opencv",catalogued
+monochrome,"other","ffmpeg video filter","ffmpeg",catalogued
+mpdecimate,"other","ffmpeg video filter","ffmpeg",catalogued
+msad,"other","ffmpeg video filter","ffmpeg",catalogued
+multiply,"other","ffmpeg video filter","ffmpeg",catalogued
+negate,"other","ffmpeg video filter","ffmpeg",catalogued
+nnedi,"other","ffmpeg video filter","ffmpeg",catalogued
+noformat,"other","ffmpeg video filter","ffmpeg",catalogued
+normalize,"other","ffmpeg video filter","ffmpeg",catalogued
+normalize_stretch,"other","this crate","registry",registered_unverified
+null,"other","ffmpeg video filter","ffmpeg",catalogued
+ocio,"other","ffmpeg video filter","ffmpeg",catalogued
+ocr,"other","ffmpeg video filter","ffmpeg",catalogued
+ocv,"other","ffmpeg video filter","ffmpeg",catalogued
+oscilloscope,"other","ffmpeg video filter","ffmpeg",catalogued
+palettegen,"other","ffmpeg video filter","ffmpeg",catalogued
+paletteuse,"other","ffmpeg video filter","ffmpeg",catalogued
+phase,"other","ffmpeg video filter","ffmpeg",catalogued
+phasecorrelate,"other","OpenCV imgproc function","opencv",catalogued
+phasecorrelateiterative,"other","OpenCV imgproc function","opencv",catalogued
+photosensitivity,"other","ffmpeg video filter","ffmpeg",catalogued
+pixdesctest,"other","ffmpeg video filter","ffmpeg",catalogued
+pixelate,"other","this crate","registry",registered_unverified
+pixelize,"other","ffmpeg video filter","ffmpeg",catalogued
+pixscope,"other","ffmpeg video filter","ffmpeg",catalogued
+pointpolygontest,"other","OpenCV imgproc function","opencv",catalogued
+posterize,"other","this crate","registry",registered_unverified
+pp7,"other","ffmpeg video filter","ffmpeg",catalogued
+prewitt,"other","ffmpeg video filter","ffmpeg",catalogued
+psnr,"other","ffmpeg video filter","ffmpeg",catalogued
+pullup,"other","ffmpeg video filter","ffmpeg",catalogued
+qp,"other","ffmpeg video filter","ffmpeg",catalogued
+qrencode,"other","ffmpeg video filter","ffmpeg",catalogued
+quirc,"other","ffmpeg video filter","ffmpeg",catalogued
+random,"other","ffmpeg video filter","ffmpeg",catalogued
+readeia608,"other","ffmpeg video filter","ffmpeg",catalogued
+readvitc,"other","ffmpeg video filter","ffmpeg",catalogued
+removelogo,"other","ffmpeg video filter","ffmpeg",catalogued
+repeatfields,"other","ffmpeg video filter","ffmpeg",catalogued
+reverse,"other","ffmpeg video filter","ffmpeg",catalogued
+rgbashift,"other","ffmpeg video filter","ffmpeg",catalogued
+roberts,"other","ffmpeg video filter","ffmpeg",catalogued
+sab,"other","ffmpeg video filter","ffmpeg",catalogued
+scdet,"other","ffmpeg video filter","ffmpeg",catalogued
+scharr,"other","ffmpeg video filter","ffmpeg|opencv",catalogued
+scroll,"other","ffmpeg video filter","ffmpeg",catalogued
+separatefields,"other","ffmpeg video filter","ffmpeg",catalogued
+sepfilter2d,"other","OpenCV imgproc function","opencv",catalogued
+sepia,"other","this crate","registry",registered_unverified
+setfield,"other","ffmpeg video filter","ffmpeg",catalogued
+setparams,"other","ffmpeg video filter","ffmpeg",catalogued
+shear,"other","ffmpeg video filter","ffmpeg",catalogued
+showinfo,"other","ffmpeg video filter","ffmpeg",catalogued
+showpalette,"other","ffmpeg video filter","ffmpeg",catalogued
+shuffleframes,"other","ffmpeg video filter","ffmpeg",catalogued
+shufflepixels,"other","ffmpeg video filter","ffmpeg",catalogued
+shuffleplanes,"other","ffmpeg video filter","ffmpeg",catalogued
+signalstats,"other","ffmpeg video filter","ffmpeg",catalogued
+signature,"other","ffmpeg video filter","ffmpeg",catalogued
+siti,"other","ffmpeg video filter","ffmpeg",catalogued
+solarize,"other","this crate","registry",registered_unverified
+spp,"other","ffmpeg video filter","ffmpeg",catalogued
+sqrboxfilter,"other","OpenCV imgproc function","opencv",catalogued
+sr,"other","ffmpeg video filter","ffmpeg",catalogued
+sr_amf,"other","ffmpeg video filter","ffmpeg",catalogued
+ssim,"other","ffmpeg video filter","ffmpeg",catalogued
+subtitles,"other","ffmpeg video filter","ffmpeg",catalogued
+super2xsai,"other","ffmpeg video filter","ffmpeg",catalogued
+swaprect,"other","ffmpeg video filter","ffmpeg",catalogued
+swapuv,"other","ffmpeg video filter","ffmpeg",catalogued
+telecine,"other","ffmpeg video filter","ffmpeg",catalogued
+thumbnail,"other","ffmpeg video filter","ffmpeg",catalogued
+tile,"other","ffmpeg video filter","ffmpeg",catalogued
+tiltandshift,"other","ffmpeg video filter","ffmpeg",catalogued
+tint,"other","this crate","registry",registered_unverified
+tinterlace,"other","ffmpeg video filter","ffmpeg",catalogued
+trim,"other","ffmpeg video filter","ffmpeg",catalogued
+untile,"other","ffmpeg video filter","ffmpeg",catalogued
+uspp,"other","ffmpeg video filter","ffmpeg",catalogued
+v360,"other","ffmpeg video filter","ffmpeg",catalogued
+vectorscope,"other","ffmpeg video filter","ffmpeg",catalogued
+vfrdet,"other","ffmpeg video filter","ffmpeg",catalogued
+vif,"other","ffmpeg video filter","ffmpeg",catalogued
+vignette,"other","this crate","registry|ffmpeg",registered_unverified
+vpp_amf,"other","ffmpeg video filter","ffmpeg",catalogued
+vqe_amf,"other","ffmpeg video filter","ffmpeg",catalogued
+vstack,"other","ffmpeg video filter","ffmpeg",catalogued
+w3fdif,"other","ffmpeg video filter","ffmpeg",catalogued
+waveform,"other","ffmpeg video filter","ffmpeg",catalogued
+wrapperemd,"other","OpenCV imgproc function","opencv",catalogued
+xbr,"other","ffmpeg video filter","ffmpeg",catalogued
+xcorrelate,"other","ffmpeg video filter","ffmpeg",catalogued
+xfade,"other","ffmpeg video filter","ffmpeg",catalogued
+xpsnr,"other","ffmpeg video filter","ffmpeg",catalogued
+xstack,"other","ffmpeg video filter","ffmpeg",catalogued
+yadif,"other","ffmpeg video filter","ffmpeg",catalogued
+zoompan,"other","ffmpeg video filter","ffmpeg",catalogued
