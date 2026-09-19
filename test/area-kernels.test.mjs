@@ -110,9 +110,16 @@ test('pixelate samples the centre of each cell', () => {
 
 test('unsharp_mask amplifies the difference from the 3x3 mean', () => {
   const amount = 1.5;
+  // Keep the mean unrounded: the kernel divides by 9 in float, and rounding it here
+  // (boxMean is the 1-D window used by motion blur) would hide a real difference.
+  const mean2d = (b, x, y, c) => {
+    let sum = 0;
+    for (let dy = -1; dy <= 1; dy += 1) for (let dx = -1; dx <= 1; dx += 1) sum += at(b, x + dx, y + dy, c);
+    return sum / 9;
+  };
   checkChannel('unsharp_mask', (b, x, y, c) => {
-    const mean = boxMean(b, x, y, c, 1);
-    return clamp(b[(y * W + x) * 4 + c] + amount * (b[(y * W + x) * 4 + c] - mean));
+    const base = b[(y * W + x) * 4 + c];
+    return clamp(base + amount * (base - mean2d(b, x, y, c)));
   }, [amount]);
 });
 
