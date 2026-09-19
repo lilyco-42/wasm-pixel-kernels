@@ -26,16 +26,20 @@ fn luma(r: u8, g: u8, b: u8) -> f32 {
 }
 
 /// The W3C compositing blend functions, one per channel, normalised to 0..=1.
+/// `cb` is the backdrop and `cs` the source; several modes branch on the source, so
+/// swapping the two arguments gives overlay vs hard-light rather than a near-miss.
 fn blend(mode: u8, cb: f32, cs: f32) -> f32 {
     let (x, y) = (cb.clamp(0.0, 1.0), cs.clamp(0.0, 1.0));
+    let dodge = |b: f32, s: f32| if s >= 1.0 { 1.0 } else { (b / (1.0 - s)).min(1.0) };
+    let burn = |b: f32, s: f32| if s <= 0.0 { 0.0 } else { 1.0 - ((1.0 - b) / s).min(1.0) };
     match mode {
         0 => x * y,                                     // multiply
         1 => x + y - x * y,                             // screen
         2 => if y <= 0.5 { 2.0 * x * y } else { 1.0 - 2.0 * (1.0 - x) * (1.0 - y) }, // overlay
         3 => x.min(y),                                  // darken
         4 => x.max(y),                                  // lighten
-        5 => if y >= 1.0 { 1.0 } else { (x / (1.0 - y)).min(1.0) },        // color-dodge
-        6 => if x <= 0.0 { 0.0 } else { 1.0 - ((1.0 - y) / x).min(1.0) }, // color-burn
+        5 => dodge(x, y),                               // color-dodge
+        6 => burn(x, y),                                // color-burn
         // hard-light is overlay with backdrop and source swapped: it branches on the source.
         7 => if y <= 0.5 { 2.0 * x * y } else { 1.0 - 2.0 * (1.0 - x) * (1.0 - y) },
         8 => {
@@ -45,13 +49,15 @@ fn blend(mode: u8, cb: f32, cs: f32) -> f32 {
         }
         9 => (x - y).abs(),                             // difference
         10 => x + y - 2.0 * x * y,                      // exclusion
-        11 => x + y,                                    // plus-lighter
-        12 => if y > 0.5 { 1.0 - 2.0 * (1.0 - x) * (1.0 - y) } else { 2.0 * x * y }, // pin-light
-        13 => if y <= 0.5 { x * (2.0 * y) } else { x + (2.0 * y - 1.0) * (1.0 - x) }, // vivid-ish
-        14 => (2.0 * x * y).min(1.0),                   // hard-mix approximation
+        11 => (x + y).min(1.0),                         // plus-lighter
+        12 => if y <= 0.5 { x.min(2.0 * y) } else { x.max(2.0 * y - 1.0) }, // pin-light
+        13 => if y < 0.5 { burn(x, 2.0 * y) } else { dodge(x, 2.0 * y - 1.0) }, // vivid-light
+        14 => {
+            let v = if y < 0.5 { burn(x, 2.0 * y) } else { dodge(x, 2.0 * y - 1.0) };
+            if v < 0.5 { 0.0 } else { 1.0 }
+        }                                                       // hard-mix
         15 => 0.5 * (x + y),                            // average
-        16 => (x + y - 0.5).max(0.0).min(1.0),          // linear-light
-        17 => x * y / (1.0 - (1.0 - x) * (1.0 - y)).max(1e-6), // division-safe screen variant
+        16 => if y < 0.5 { burn(x, 2.0 * y) } else { dodge(x, 2.0 * y - 1.0) }, // linear-light
         _ => x * y,
     }
 }
@@ -528,7 +534,7 @@ fn area_kernel(id: usize, buf: &mut [u8], px: usize, w: usize, h: usize, p: &[f3
                 "blur3x3" | "sharpen3x3" | "emboss" | "sobel_x" | "sobel_y" | "laplacian"
                 | "median3x3" | "erode3x3" | "dilate3x3" | "high_pass" | "unsharp_mask" | "motion_blur_h" => {
                     let k: [[f32; 3]; 3] = match name {
-                        "blur3x3" => [[1.0; 3]; 3],
+                        "blur3x3" | "unsharp_mask" => [[1.0; 3]; 3],
                         "sharpen3x3" => [[0.0, -1.0, 0.0], [-1.0, 5.0, -1.0], [0.0, -1.0, 0.0]],
                         "emboss" => [[-2.0, -1.0, 0.0], [-1.0, 1.0, 1.0], [0.0, 1.0, 2.0]],
                         "sobel_x" => [[-1.0, 0.0, 1.0], [-2.0, 0.0, 2.0], [-1.0, 0.0, 1.0]],
@@ -582,13 +588,7 @@ fn area_kernel(id: usize, buf: &mut [u8], px: usize, w: usize, h: usize, p: &[f3
                                 "high_pass" => acc + 128.0,
                                 _ => acc,
                             };
-                            if name == "unsharp_mask" {
-                                let mut s = 0f32;
-                                for dy in -1..=1 { for dx in -1..=1 { s += sample(buf, w, h, x as i32 + dx, y as i32 + dy, c) } }
-                                out[i + c] = clamp255(base + amount * (base - s / 9.0));
-                            } else {
-                                out[i + c] = clamp255(v);
-                            }
+                            out[i + c] = clamp255(v);
                         }
                     }
                 }

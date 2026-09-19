@@ -124,6 +124,20 @@ test('blend modes follow the W3C formulas', () => {
     blend_darken: (b, s) => Math.min(b, s),
     blend_lighten: (b, s) => Math.max(b, s),
     blend_plus_lighter: (b, s) => Math.min(1, b + s),
+    blend_softlight: (b, s) => {
+      const dd = (t) => (t <= 0.25 ? ((16 * t - 12) * t + 4) * t : Math.sqrt(t));
+      return s <= 0.5 ? b - (1 - 2 * s) * b * (1 - b) : b + (2 * s - 1) * (dd(b) - b);
+    },
+    blend_dodge: (b, s) => (s >= 1 ? 1 : Math.min(1, b / (1 - s))),
+    blend_burn: (b, s) => (s <= 0 ? 0 : 1 - Math.min(1, (1 - b) / s)),
+    blend_pinlight: (b, s) => (s <= 0.5 ? Math.min(b, 2 * s) : Math.max(b, 2 * s - 1)),
+    blend_vividlight: (b, s) => (s < 0.5
+      ? (2 * s <= 0 ? 0 : 1 - Math.min(1, (1 - b) / (2 * s)))
+      : (2 * s - 1 >= 1 ? 1 : Math.min(1, b / (1 - (2 * s - 1))))),
+    blend_linearlight: (b, s) => (s < 0.5
+      ? (2 * s <= 0 ? 0 : 1 - Math.min(1, (1 - b) / (2 * s)))
+      : (2 * s - 1 >= 1 ? 1 : Math.min(1, b / (1 - (2 * s - 1))))),
+    blend_average: (b, s) => (b + s) / 2,
   };
   for (const [kernel, fn] of Object.entries(cases)) {
     const out = apply(kernel, src, 16, 16, params);
@@ -132,6 +146,16 @@ test('blend modes follow the W3C formulas', () => {
         const wanted = clamp(fn(n(backdrop[c]), n(src[i + c])) * 255);
         assert.ok(Math.abs(out[i + c] - wanted) <= 2, `${kernel} channel ${c} pixel ${i / 4}: ${out[i + c]} vs ${wanted}`);
       }
+    }
+  }
+});
+
+test('hard-mix outputs only black or white per channel', () => {
+  const src = gradient();
+  const out = apply('blend_hardmix', src, 16, 16, [200, 100, 50, 1.0]);
+  for (let i = 0; i < src.length; i += 4) {
+    for (let c = 0; c < 3; c += 1) {
+      assert.ok(out[i + c] === 0 || out[i + c] === 255, `hard-mix must be binary, got ${out[i + c]}`);
     }
   }
 });

@@ -108,6 +108,18 @@ test('pixelate samples the centre of each cell', () => {
   }, [cell]);
 });
 
+test('unsharp_mask amplifies the difference from the 3x3 mean', () => {
+  const amount = 1.5;
+  checkChannel('unsharp_mask', (b, x, y, c) => {
+    const mean = boxMean(b, x, y, c, 1);
+    return clamp(b[(y * W + x) * 4 + c] + amount * (b[(y * W + x) * 4 + c] - mean));
+  }, [amount]);
+});
+
+test('high_pass is the 3x3 high-pass kernel offset by mid grey', () => {
+  checkChannel('high_pass', (b, x, y, c) => convolve3(b, x, y, c, [[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]], 1, 128));
+});
+
 test('vignette darkens corners but not the centre', () => {
   const src = new Uint8Array(W * H * 4).fill(200);
   for (let i = 3; i < src.length; i += 4) src[i] = 255;
