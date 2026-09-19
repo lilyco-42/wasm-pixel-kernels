@@ -218,19 +218,19 @@ test('color_balance shifts each channel by its parameter', () => {
   }
 });
 
-test('vibrance leaves grey alone and boosts muted colour more than vivid colour', () => {
+test('vibrance leaves grey alone and never pushes an already-saturated pixel further', () => {
   const grey = new Uint8Array([120, 120, 120, 255, 120, 120, 120, 255]);
   assert.deepEqual([...apply('vibrance', grey, 2, 1, [1.0])], [...grey], 'vibrance must not touch neutral grey');
 
+  // Pure red has saturation 1.0, so the protection term must leave it untouched
+  // while a muted pixel gains saturation.
+  const saturated = new Uint8Array([255, 0, 0, 255]);
+  assert.deepEqual([...apply('vibrance', saturated, 1, 1, [1.0])], [...saturated], 'saturation 1 must be protected');
+
   const muted = new Uint8Array([120, 130, 125, 255]);
-  const vivid = new Uint8Array([250, 20, 120, 255]);
-  const spread = (buf) => {
-    const out = apply('vibrance', buf, 1, 1, [1.0]);
-    const ch = [out[0], out[1], out[2]];
-    return Math.max(...ch) - Math.min(...ch);
-  };
-  const before = (buf) => { const ch = [buf[0], buf[1], buf[2]]; return Math.max(...ch) - Math.min(...ch) };
-  assert.ok(spread(muted) - before(muted) > spread(vivid) - before(vivid), 'muted pixels should gain more');
+  const out = apply('vibrance', muted, 1, 1, [1.0]);
+  const spread = (a) => Math.max(a[0], a[1], a[2]) - Math.min(a[0], a[1], a[2]);
+  assert.ok(spread(out) > spread(muted), `muted pixel should gain spread: ${spread(muted)} -> ${spread(out)}`);
 });
 
 test('noise is bounded, deterministic and actually perturbs the image', () => {
