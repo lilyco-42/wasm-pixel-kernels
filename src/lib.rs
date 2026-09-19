@@ -311,7 +311,8 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
                 b = 255.0 * (b / 255.0).powf(gm);
             }
             "levels" => {
-                let (lo, hi, gm) = (arg(p, 0, 0.0) / 255.0, arg(p, 1, 1.0), arg(p, 2, 1.0).max(0.01));
+                // params are normalised: black 0..1, white 0..1, gamma
+                let (lo, hi, gm) = (arg(p, 0, 0.0), arg(p, 1, 1.0), arg(p, 2, 1.0).max(0.01));
                 for c in [&mut r, &mut g, &mut b] {
                     let v = ((*c / 255.0) - lo).max(0.0) / (hi - lo).max(1e-6);
                     *c = 255.0 * v.powf(1.0 / gm);
@@ -320,9 +321,9 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
             "levels_rgb" => {
                 let spans = [(0usize, &mut r), (1, &mut g), (2, &mut b)];
                 for (i, c) in spans {
-                    let black = arg(p, i * 3, 0.0) / 255.0;
+                    let black = arg(p, i * 3, 0.0);
                     let gm = arg(p, i * 3 + 1, 1.0).max(0.01);
-                    let white = arg(p, i * 3 + 2, 255.0) / 255.0;
+                    let white = arg(p, i * 3 + 2, 1.0);
                     let v = ((*c / 255.0) - black).max(0.0) / (white - black).max(1e-6);
                     *c = 255.0 * v.powf(1.0 / gm);
                 }
