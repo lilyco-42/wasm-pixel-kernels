@@ -230,7 +230,7 @@ pub unsafe extern "C" fn process(
 
     let (wi, hi) = if w <= 0 || h <= 0 { ((px as f32).sqrt() as i32, (px as f32).sqrt() as i32) } else { (w, h) };
     if wi as usize * hi as usize != px { return -3 }
-    if wi > MAX_SIDE || hi > MAX_SIDE { return -4 }
+    if wi as usize > MAX_SIDE || hi as usize > MAX_SIDE { return -4 }
 
     point_kernel(id as usize, buf, p);
     if KERNELS[id as usize].class == "blend" { blend_kernel(id as usize, buf, p); }
