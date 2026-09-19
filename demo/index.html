@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wasm-pixel-kernels 演示</title>
+<style>
+:root{--fg:#16191d;--dim:#5b6472;--line:#dfe3e8;--accent:#1f5fd0}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.6 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);background:#fff}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;margin:0 0 4px}
+p.sub{color:var(--dim);margin:0 0 20px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:16px}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--dim)}
+select,input[type=range]{min-height:44px;font:inherit}
+select{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;max-width:260px}
+button{min-height:44px;padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;cursor:pointer}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pair{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:760px){.pair{grid-template-columns:1fr 1fr}}
+.pane{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fafbfc}
+.pane h2{font-size:12px;margin:0 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+canvas{width:100%;height:auto;display:block;background:repeating-conic-gradient(#eef1f4 0% 25%,#fff 0% 50%) 50%/16px 16px}
+#status{color:var(--dim);font-size:13px;margin-top:12px;min-height:20px}
+.meta{color:var(--dim);font-size:12px;margin-top:22px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>wasm-pixel-kernels 演示</h1>
+  <p class="sub">图片不出本机：所有像素运算都在这个页面里的 WebAssembly 上完成。算子清单与数值测试见
+    <a href="https://github.com/lilyco-42/wasm-pixel-kernels">仓库</a>。</p>
+
+  <div class="bar">
+    <label>图片<input type="file" id="file" accept="image/*"></label>
+    <label>算子<select id="kernel"></select></label>
+    <label>参数 A<input type="range" id="pa" min="-1" max="1" step="0.01" value="0.2"></label>
+    <label>参数 B<input type="range" id="pb" min="0" max="4" step="0.1" value="1"></label>
+    <button class="primary" id="run">应用</button>
+    <button id="save">下载 PNG</button>
+  </div>
+
+  <div class="pair">
+    <div class="pane"><h2>原图</h2><canvas id="src"></canvas></div>
+    <div class="pane"><h2>结果</h2><canvas id="out"></canvas></div>
+  </div>
+  <div id="status"></div>
+  <div class="meta" id="meta"></div>
+</div>
+
+<script type="module">
+const statusEl = document.getElementById('status');
+const metaEl = document.getElementById('meta');
+const srcCanvas = document.getElementById('src');
+const outCanvas = document.getElementById('out');
+
+let wasm = null;
+let source = null;   // ImageData of the loaded picture
+
+function report(message) { statusEl.textContent = message; }
+
+async function loadWasm() {
+  const bytes = await fetch('kernels.wasm');
+  if (!bytes.ok) throw new Error('kernels.wasm 未找到');
+  const { instance } = await WebAssembly.instantiate(await bytes.arrayBuffer(), {});
+  const { memory, alloc, dealloc } = instance.exports;
+
+  const readStrings = (exportName) => {
+    const cap = 16384;
+    const ptr = alloc(cap);
+    const written = instance.exports[exportName](ptr, cap);
+    const text = new TextDecoder().decode(new Uint8Array(memory.buffer, ptr, Math.min(written, cap)));
+    dealloc(ptr, cap);
+    return text.split('\0').filter(Boolean);
+  };
+
+  const names = readStrings('kernel_names');
+  return {
+    names,
+    apply(name, rgba, w, h, params) {
+      const len = rgba.length;
+      const ptr = alloc(len);
+      new Uint8Array(memory.buffer, ptr, len).set(rgba);
+      const pptr = alloc(params.length * 4);
+      new Float32Array(memory.buffer, pptr, params.length).set(params);
+      const rc = instance.exports.process(names.indexOf(name), ptr, len, w, h, pptr, params.length);
+      if (rc !== 0) throw new Error(`${name} 返回错误码 ${rc}`);
+      const copy = new Uint8Array(new Uint8Array(memory.buffer.slice(ptr, ptr + len)));
+      dealloc(ptr, len);
+      dealloc(pptr, params.length * 4);
+      return copy;
+    },
+  };
+}
+
+function draw(canvas, imageData) {
+  canvas.width = imageData.width;
+  canvas.height = imageData.height;
+  canvas.getContext('2d').putImageData(imageData, 0, 0);
+}
+
+function paramsFor(name) {
+  const a = Number(document.getElementById('pa').value);
+  const b = Number(document.getElementById('pb').value);
+  if (name.startsWith('blend_')) return [200, 100, 50, (a + 1) / 2];
+  if (name === 'box_blur' || name === 'gaussian_blur' || name === 'motion_blur_h') return [Math.max(1, Math.round(b * 3))];
+  if (name === 'pixelate') return [Math.max(1, Math.round(b * 8))];
+  if (name === 'posterize') return [Math.max(2, Math.round(b * 4))];
+  if (name === 'threshold' || name === 'solarize') return [((a + 1) / 2) * 255];
+  if (name === 'levels') return [(a + 1) / 6, Math.max((a + 1) / 6 + 0.05, 0.6 + b / 10), b];
+  if (name === 'vignette' || name === 'noise_uniform' || name === 'noise_gaussian' || name === 'dither_bayer4') return [b];
+  if (name === 'channel_mixer' || name === 'black_white') return [b, 1 - b, 0, 0, b, 1 - b, 1 - b, 0, b];
+  return [a, b];
+}
+
+function applyKernel() {
+  if (!wasm || !source) { report('先选一张图片'); return }
+  const name = document.getElementById('kernel').value;
+  const started = performance.now();
+  try {
+    const out = new Uint8ClampedArray(wasm.apply(name, new Uint8Array(source.data), source.width, source.height, paramsFor(name)));
+    draw(outCanvas, new ImageData(out, source.width, source.height));
+    const ms = Math.round(performance.now() - started);
+    report(`${name} · ${source.width}×${source.height} · ${ms} ms`);
+  } catch (error) {
+    report(`失败：${error.message}`);
+  }
+}
+
+document.getElementById('file').addEventListener('change', async (event) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  const bitmap = await createImageBitmap(file);
+  const canvas = document.createElement('canvas');
+  const scale = Math.min(1, 1600 / Math.max(bitmap.width, bitmap.height));
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  source = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  draw(srcCanvas, source);
+  draw(outCanvas, source);
+  bitmap.close?.();
+  report('就绪');
+});
+
+document.getElementById('run').addEventListener('click', applyKernel);
+document.getElementById('pa').addEventListener('input', applyKernel);
+document.getElementById('pb').addEventListener('input', applyKernel);
+document.getElementById('save').addEventListener('click', () => {
+  if (!source) { report('先选一张图片'); return }
+  const link = document.createElement('a');
+  link.download = `kernels-${document.getElementById('kernel').value}.png`;
+  link.href = outCanvas.toDataURL('image/png');
+  link.click();
+});
+
+try {
+  wasm = await loadWasm();
+  const select = document.getElementById('kernel');
+  select.append(...wasm.names.map((name) => Object.assign(document.createElement('option'), { value: name, textContent: name })));
+  metaEl.textContent = `已加载 ${wasm.names.length} 个算子；每个都在 CI 里与独立 JS 参考实现做过数值对照。`;
+  report('选图后可直接应用');
+} catch (error) {
+  report(`wasm 加载失败：${error.message}`);
+}
+</script>
+</body>
+</html>

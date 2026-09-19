@@ -49,3 +49,32 @@ jobs:
           node scripts/build-inventory.mjs
       - name: Fail if the inventory drops below 200 modules
         run: node -e "const s=require('./inventory/modules.json').summary; if (s.total < 200) { console.error('only '+s.total); process.exit(1) } console.log('modules', s.total)"
+
+  # Serve the demo straight from the artifact CI just produced and tested, so the
+  # page can never show a build that CI did not verify.
+  pages:
+    needs: wasm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: kernels-wasm
+      - name: Assemble site
+        run: |
+          mkdir -p site
+          cp wasm_pixel_kernels.wasm site/kernels.wasm
+          cp demo/index.html site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
