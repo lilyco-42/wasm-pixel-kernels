@@ -13,6 +13,9 @@ const lines = (file) => (existsSync(file) ? readFileSync(file, 'utf8') : '').spl
 const ffmpegVideo = lines('inventory/ffmpeg-video-filters.txt');
 const opencvFns = lines('inventory/opencv-imgproc-fns.txt');
 const registryNames = [...readFileSync('src/lib.rs', 'utf8').matchAll(/Def \{ name: "([a-z0-9_]+)"/g)].map((m) => m[1]);
+// Derived from the test file rather than typed here, so a status can never claim
+// more than CI actually checks.
+const verifiedNames = [...readFileSync('test/kernels.test.mjs', 'utf8').matchAll(/apply\('([a-z0-9_]+)'/g)].map((m) => m[1]);
 
 // W3C "Compositing and Blending Level 1" blend-mode list.
 const BLEND_MODES = [
@@ -62,7 +65,11 @@ const add = (name, source, analogue) => {
     category: classify(name),
     analogue,
     sources: [source],
-    status: registryNames.includes(key) ? 'registered_unverified' : 'catalogued',
+    status: verifiedNames.includes(key)
+      ? 'verified'
+      : registryNames.includes(key)
+        ? 'registered_ci_smoke'
+        : 'catalogued',
   });
 };
 
@@ -72,11 +79,9 @@ for (const name of ffmpegVideo) add(name, 'ffmpeg', 'ffmpeg video filter');
 for (const name of opencvFns) add(name.toLowerCase(), 'opencv', 'OpenCV imgproc function');
 
 const list = [...rows.values()].sort((a, b) => (a.category + a.module).localeCompare(b.category + b.module));
-const registered = list.filter((r) => r.status === 'registered_unverified').length;
 const summary = {
   total: list.length,
-  registeredUnverified: registered,
-  catalogued: list.length - registered,
+  byStatus: list.reduce((acc, r) => ({ ...acc, [r.status]: (acc[r.status] ?? 0) + 1 }), {}),
   byCategory: list.reduce((acc, r) => ({ ...acc, [r.category]: (acc[r.category] ?? 0) + 1 }), {}),
   sourceLicences: Object.fromEntries(Object.entries(SOURCES).map(([k, v]) => [k, v.license])),
   sources: Object.fromEntries(Object.entries(SOURCES).map(([k, v]) => [k, v.url])),

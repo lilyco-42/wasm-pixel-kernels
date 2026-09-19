@@ -1,8 +1,11 @@
 {
   "summary": {
     "total": 486,
-    "registeredUnverified": 66,
-    "catalogued": 420,
+    "byStatus": {
+      "catalogued": 420,
+      "registered_ci_smoke": 57,
+      "verified": 9
+    },
     "byCategory": {
       "analysis": 13,
       "binary / morphology": 10,
@@ -172,7 +175,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "erode",
@@ -190,7 +193,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "morpho",
@@ -228,7 +231,7 @@
         "ffmpeg",
         "opencv"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "watershed",
@@ -255,7 +258,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_burn",
@@ -264,7 +267,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_darken",
@@ -274,7 +277,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_darken_legacy",
@@ -293,7 +296,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_difference_legacy",
@@ -311,7 +314,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_exclusion",
@@ -321,7 +324,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_hard_light",
@@ -348,7 +351,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_hardmix",
@@ -357,7 +360,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_lighten",
@@ -367,7 +370,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_lighten_legacy",
@@ -395,7 +398,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "blend_multiply_legacy",
@@ -423,7 +426,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_overlay_legacy",
@@ -441,7 +444,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_plus_lighter",
@@ -451,7 +454,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_soft_light",
@@ -478,7 +481,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_vividlight",
@@ -487,7 +490,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "channel_mixer",
@@ -496,7 +499,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "mix",
@@ -524,7 +527,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "premultiply_dynamic",
@@ -561,7 +564,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "avgblur",
@@ -606,7 +609,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blurdetect",
@@ -624,7 +627,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "boxblur",
@@ -651,7 +654,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "gaussianblur",
@@ -705,7 +708,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "medianblur",
@@ -723,7 +726,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "noise_gaussian",
@@ -732,7 +735,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "smartblur",
@@ -804,7 +807,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_color",
@@ -876,7 +879,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "colorbalance",
@@ -1029,7 +1032,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "equalizehist",
@@ -1048,7 +1051,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "gamma",
@@ -1057,7 +1060,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "geq",
@@ -1120,7 +1123,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "levels_rgb",
@@ -1129,7 +1132,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "lut_rgb",
@@ -1138,7 +1141,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "lut1d",
@@ -1183,7 +1186,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "selectivecolor",
@@ -1201,7 +1204,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "thistogram",
@@ -1238,7 +1241,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "alphaextract",
@@ -1274,7 +1277,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "chromahold",
@@ -1373,7 +1376,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "grayscale_luminosity",
@@ -1382,7 +1385,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "hflip",
@@ -1409,7 +1412,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "invertaffinetransform",
@@ -1427,7 +1430,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "lumakey",
@@ -1644,7 +1647,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blendlinear",
@@ -1915,7 +1918,7 @@
         "registry",
         "opencv"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "sharpen3x3",
@@ -1924,7 +1927,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "sobel",
@@ -1943,7 +1946,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "sobel_y",
@@ -1952,7 +1955,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "unsharp",
@@ -1970,7 +1973,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "calcbackproject",
@@ -2043,7 +2046,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "blend_screen_legacy",
@@ -2061,7 +2064,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "nlmeans",
@@ -2088,7 +2091,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "owdenoise",
@@ -2277,7 +2280,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "brightness_contrast",
@@ -2286,7 +2289,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "bwdif",
@@ -2385,7 +2388,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "convertmaps",
@@ -2754,7 +2757,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "emd",
@@ -3160,7 +3163,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "hqdn3d",
@@ -3278,7 +3281,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "idet",
@@ -3332,7 +3335,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "verified"
     },
     {
       "module": "iscontourconvex",
@@ -3638,7 +3641,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "null",
@@ -3755,7 +3758,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "pixelize",
@@ -3791,7 +3794,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "pp7",
@@ -3990,7 +3993,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "setfield",
@@ -4098,7 +4101,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "spp",
@@ -4224,7 +4227,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "tinterlace",
@@ -4306,7 +4309,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_unverified"
+      "status": "registered_ci_smoke"
     },
     {
       "module": "vpp_amf",
