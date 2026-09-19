@@ -17,7 +17,7 @@ const MAX_SIDE: usize = 4096;
 
 #[inline]
 fn clamp255(v: f32) -> u8 {
-    if v <= 0.0 { 0 } else if v >= 255.0 { 255 } else { v + 0.5 } as u8
+    if v <= 0.0 { 0 } else if v >= 255.0 { 255 } else { (v + 0.5) as u8 }
 }
 
 #[inline]
@@ -318,9 +318,12 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
                 }
             }
             "levels_rgb" => {
-                for (i, c) in [&mut r, &mut g, &mut b].iter_mut().enumerate() {
-                    let (o, gm, wh) = (arg(p, i * 3, 0.0) / 255.0, arg(p, i * 3 + 1, 1.0).max(0.01), arg(p, i * 3 + 2, 255.0) / 255.0);
-                    let v = ((*c / 255.0) - o).max(0.0) / (wh - o).max(1e-6);
+                let spans = [(0usize, &mut r), (1, &mut g), (2, &mut b)];
+                for (i, c) in spans {
+                    let black = arg(p, i * 3, 0.0) / 255.0;
+                    let gm = arg(p, i * 3 + 1, 1.0).max(0.01);
+                    let white = arg(p, i * 3 + 2, 255.0) / 255.0;
+                    let v = ((*c / 255.0) - black).max(0.0) / (white - black).max(1e-6);
                     *c = 255.0 * v.powf(1.0 / gm);
                 }
             }
@@ -460,7 +463,7 @@ fn area_kernel(id: usize, buf: &mut [u8], px: usize, w: usize, h: usize, p: &[f3
     if name == "box_blur" || name == "gaussian_blur" {
         // Separable moving average. A gaussian is three box passes, which converges
         // on a gaussian without shipping a kernel table into the module.
-        let radius = arg(p, 0, 2.0).max(1.0) as usize;
+        let radius = arg(p, 0, 2.0).max(1.0) as i32;
         let passes = if name == "gaussian_blur" { 3 } else { 1 };
         let mut src = vec![0u8; buf.len()];
         src.copy_from_slice(buf);
