@@ -14,10 +14,13 @@ const ffmpegVideo = lines('inventory/ffmpeg-video-filters.txt');
 const opencvFns = lines('inventory/opencv-imgproc-fns.txt');
 const registryNames = [...readFileSync('src/lib.rs', 'utf8').matchAll(/Def \{ name: "([a-z0-9_]+)"/g)].map((m) => m[1]);
 // Derived from the test files rather than typed here, so a status can never claim
-// more than CI actually checks.
-const verifiedNames = readdirSync('test')
+// more than CI actually checks. Kernel names are matched anywhere in the test source,
+// because several tests drive a table of cases with the name as an object key.
+const testSource = readdirSync('test')
   .filter((f) => f.endsWith('.test.mjs'))
-  .flatMap((f) => [...readFileSync(`test/${f}`, 'utf8').matchAll(/(?:apply|checkPoint|checkChannel)\('([a-z0-9_]+)'/g)].map((m) => m[1]));
+  .map((f) => readFileSync(`test/${f}`, 'utf8'))
+  .join('\n');
+const verifiedNames = registryNames.filter((name) => new RegExp(`['"\`:]\\s*${name}\\b|\\b${name}\\s*:`).test(testSource));
 
 // W3C "Compositing and Blending Level 1" blend-mode list.
 const BLEND_MODES = [

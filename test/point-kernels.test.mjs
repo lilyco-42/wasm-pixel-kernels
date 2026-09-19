@@ -208,6 +208,48 @@ test('equalise spreads the histogram and keeps the extremes', () => {
   assert.ok(max >= 250, `expected the high end to reach white, got ${max}`);
 });
 
+test('color_balance shifts each channel by its parameter', () => {
+  const src = gradient();
+  const out = apply('color_balance', src, 16, 16, [0.1, -0.05, 0.0]);
+  for (let i = 0; i < src.length; i += 4) {
+    assert.ok(Math.abs(out[i] - clamp(src[i] + 0.1 * 255)) <= 1);
+    assert.ok(Math.abs(out[i + 1] - clamp(src[i + 1] - 0.05 * 255)) <= 1);
+    assert.equal(out[i + 2], src[i + 2]);
+  }
+});
+
+test('vibrance leaves grey alone and boosts muted colour more than vivid colour', () => {
+  const grey = new Uint8Array([120, 120, 120, 255, 120, 120, 120, 255]);
+  assert.deepEqual([...apply('vibrance', grey, 2, 1, [1.0])], [...grey], 'vibrance must not touch neutral grey');
+
+  const muted = new Uint8Array([120, 130, 125, 255]);
+  const vivid = new Uint8Array([250, 20, 120, 255]);
+  const spread = (buf) => {
+    const out = apply('vibrance', buf, 1, 1, [1.0]);
+    const ch = [out[0], out[1], out[2]];
+    return Math.max(...ch) - Math.min(...ch);
+  };
+  const before = (buf) => { const ch = [buf[0], buf[1], buf[2]]; return Math.max(...ch) - Math.min(...ch) };
+  assert.ok(spread(muted) - before(muted) > spread(vivid) - before(vivid), 'muted pixels should gain more');
+});
+
+test('noise is bounded, deterministic and actually perturbs the image', () => {
+  for (const kernel of ['noise_uniform', 'noise_gaussian']) {
+    const src = new Uint8Array(64 * 4).fill(128);
+    for (let i = 3; i < src.length; i += 4) src[i] = 255;
+    const first = apply(kernel, Uint8Array.from(src), 8, 8, [30]);
+    const second = apply(kernel, Uint8Array.from(src), 8, 8, [30]);
+    assert.deepEqual([...first], [...second], `${kernel} must be reproducible for a fixed image`);
+    let changed = 0;
+    for (let i = 0; i < first.length; i += 4) {
+      assert.ok(Math.abs(first[i] - 128) <= 60, `${kernel} exceeded its bound: ${first[i]}`);
+      assert.equal(first[i + 3], 255, `${kernel} must not touch alpha`);
+      if (first[i] !== 128) changed += 1;
+    }
+    assert.ok(changed > 32, `${kernel} produced no visible noise`);
+  }
+});
+
 test('normalize_stretch maps the observed range onto 0..255', () => {
   const src = new Uint8Array(16 * 4);
   for (let i = 0; i < 16; i += 1) {

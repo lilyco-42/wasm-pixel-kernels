@@ -104,7 +104,6 @@ pub const KERNELS: &[Def] = &[
     Def { name: "identity", class: "point", category: "tone", analogue: "no-op" },
     Def { name: "invert", class: "point", category: "tone", analogue: "PS Image > Adjustments > Invert" },
     Def { name: "grayscale_luma", class: "point", category: "tone", analogue: "PS Desaturate (Ctrl+Shift+U)" },
-    Def { name: "grayscale_luminosity", class: "point", category: "tone", analogue: "PS Channel Mixer, monochrome" },
     Def { name: "sepia", class: "point", category: "tone", analogue: "PS Photo Filter > Sepia" },
     Def { name: "brightness", class: "point", category: "tone", analogue: "PS Brightness/Contrast" },
     Def { name: "contrast", class: "point", category: "tone", analogue: "PS Brightness/Contrast" },
@@ -297,7 +296,7 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
         let (mut r, mut g, mut b) = (px[0] as f32, px[1] as f32, px[2] as f32);
         match name {
             "invert" => { r = 255.0 - r; g = 255.0 - g; b = 255.0 - b }
-            "grayscale_luma" | "grayscale_luminosity" => { let l = luma(r as u8, g as u8, b as u8); r = l; g = l; b = l }
+            "grayscale_luma" => { let l = luma(r as u8, g as u8, b as u8); r = l; g = l; b = l }
             "sepia" => {
                 let (nr, ng, nb) = (
                     0.393 * r + 0.769 * g + 0.189 * b,

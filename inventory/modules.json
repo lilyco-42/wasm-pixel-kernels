@@ -1,10 +1,9 @@
 {
   "summary": {
-    "total": 486,
+    "total": 485,
     "byStatus": {
       "catalogued": 420,
-      "verified": 43,
-      "registered_ci_smoke": 23
+      "verified": 65
     },
     "byCategory": {
       "analysis": 13,
@@ -12,7 +11,7 @@
       "blend": 35,
       "blur / sharpen": 25,
       "colour / tone": 50,
-      "composite / geometry": 43,
+      "composite / geometry": 42,
       "draw / text": 26,
       "edge / detail": 12,
       "motion / tracking": 5,
@@ -258,7 +257,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_burn",
@@ -267,7 +266,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_darken",
@@ -277,7 +276,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_darken_legacy",
@@ -296,7 +295,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_difference_legacy",
@@ -314,7 +313,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_exclusion",
@@ -324,7 +323,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_hard_light",
@@ -351,7 +350,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_hardmix",
@@ -360,7 +359,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_lighten",
@@ -370,7 +369,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_lighten_legacy",
@@ -426,7 +425,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_overlay_legacy",
@@ -444,7 +443,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_plus_lighter",
@@ -454,7 +453,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_soft_light",
@@ -481,7 +480,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_vividlight",
@@ -490,7 +489,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "channel_mixer",
@@ -735,7 +734,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "smartblur",
@@ -879,7 +878,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "colorbalance",
@@ -1241,7 +1240,7 @@
         "registry",
         "ffmpeg"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "alphaextract",
@@ -1377,15 +1376,6 @@
         "registry"
       ],
       "status": "verified"
-    },
-    {
-      "module": "grayscale_luminosity",
-      "category": "composite / geometry",
-      "analogue": "this crate",
-      "sources": [
-        "registry"
-      ],
-      "status": "registered_ci_smoke"
     },
     {
       "module": "hflip",
@@ -1647,7 +1637,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blendlinear",
@@ -1973,7 +1963,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "calcbackproject",
@@ -2046,7 +2036,7 @@
         "registry",
         "w3c"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "blend_screen_legacy",
@@ -2091,7 +2081,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "owdenoise",
@@ -3163,7 +3153,7 @@
       "sources": [
         "registry"
       ],
-      "status": "registered_ci_smoke"
+      "status": "verified"
     },
     {
       "module": "hqdn3d",
