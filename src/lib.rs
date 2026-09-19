@@ -36,7 +36,7 @@ fn blend(mode: u8, cb: f32, cs: f32) -> f32 {
         4 => x.max(y),                                  // lighten
         5 => if y >= 1.0 { 1.0 } else { (x / (1.0 - y)).min(1.0) },        // color-dodge
         6 => if x <= 0.0 { 0.0 } else { 1.0 - ((1.0 - y) / x).min(1.0) }, // color-burn
-        7 => if y <= 0.5 { 2.0 * x * y } else { 1.0 - 2.0 * (1.0 - x) * y }, // hard-light
+        7 => if x <= 0.5 { 2.0 * y * x } else { 1.0 - 2.0 * y * (1.0 - x) }, // hard-light
         8 => {
             // soft-light (W3C)
             let q = if x <= 0.25 { ((16.0 * x - 12.0) * x + 4.0) * x } else { x.sqrt() };
@@ -255,7 +255,7 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
             hist[px[1] as usize] += 1;
             hist[px[2] as usize] += 1;
         }
-        let total = (hist[0] + hist[1] + hist[2]) as f32;
+        let total = hist.iter().sum::<u32>().max(1) as f32;
         if name == "equalize" {
             let mut cdf = [0u8; 256];
             let mut acc = 0u64;

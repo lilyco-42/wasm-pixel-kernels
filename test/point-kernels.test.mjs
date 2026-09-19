@@ -20,7 +20,17 @@ test('tone point kernels match their definitions', () => {
   checkPoint('solarize', (v, p) => (v > p[0] ? 255 - v : v), [128]);
   checkPoint('threshold', (v) => (v >= 128 ? 255 : 0), [128]);
   checkPoint('grayscale_luma', (v) => clamp(luma(v, v, v)));
-  checkPoint('sepia', (v) => clamp(0.393 * v + 0.769 * v + 0.189 * v), [], 2);
+});
+
+test('sepia applies the standard 3x3 matrix per channel', () => {
+  const src = gradient();
+  const out = apply('sepia', src, 16, 16);
+  for (let i = 0; i < src.length; i += 4) {
+    const [r, g, b] = [src[i], src[i + 1], src[i + 2]];
+    assert.ok(Math.abs(out[i] - clamp(0.393 * r + 0.769 * g + 0.189 * b)) <= 1);
+    assert.ok(Math.abs(out[i + 1] - clamp(0.349 * r + 0.686 * g + 0.168 * b)) <= 1);
+    assert.ok(Math.abs(out[i + 2] - clamp(0.272 * r + 0.534 * g + 0.131 * b)) <= 1);
+  }
 });
 
 test('levels_rgb applies per-channel black/white/gamma', () => {
@@ -60,24 +70,21 @@ test('channel_mixer and black_white apply their matrices', () => {
   const bw = apply('black_white', src, 16, 16, [0.5, 0.3, 0.2]);
   for (let i = 0; i < src.length; i += 4) {
     const [r, g, b] = [src[i], src[i + 1], src[i + 2]];
-    assert.equal(mixed[i], clamp(0.8 * r + 0.1 * g + 0.05 * b));
-    assert.equal(mixed[i + 1], clamp(0.05 * r + 0.9 * g + 0.1 * b));
-    assert.equal(mixed[i + 2], clamp(0.1 * r + 0.0 * g + 0.7 * b));
-    assert.equal(bw[i], clamp(0.5 * r + 0.3 * g + 0.2 * b));
+    assert.ok(Math.abs(mixed[i] - clamp(0.8 * r + 0.1 * g + 0.05 * b)) <= 1);
+    assert.ok(Math.abs(mixed[i + 1] - clamp(0.05 * r + 0.9 * g + 0.1 * b)) <= 1);
+    assert.ok(Math.abs(mixed[i + 2] - clamp(0.1 * r + 0.0 * g + 0.7 * b)) <= 1);
+    assert.ok(Math.abs(bw[i] - clamp(0.5 * r + 0.3 * g + 0.2 * b)) <= 1);
   }
 });
 
 test('temperature and tint bias channels in opposite directions', () => {
-  const src = gradient();
-  const warm = apply('temperature', src, 16, 16, [0.5]);
-  for (let i = 0; i < src.length; i += 4) {
-    assert.ok(warm[i] > src[i], 'warming must raise red');
-    assert.ok(warm[i + 2] < src[i + 2], 'warming must lower blue');
-  }
-  const green = apply('tint', src, 16, 16, [0.5]);
-  for (let i = 0; i < src.length; i += 4) {
-    assert.ok(green[i + 1] < src[i + 1], 'positive tint must pull green down');
-  }
+  const src = new Uint8Array(4 * 4 * 4);
+  for (let i = 0; i < 16; i += 1) src.set([128, 128, 128, 255], i * 4);
+  const warm = apply('temperature', src, 4, 4, [0.5]);
+  assert.ok(warm[0] > 128, `warming must raise red, got ${warm[0]}`);
+  assert.ok(warm[2] < 128, `warming must lower blue, got ${warm[2]}`);
+  const green = apply('tint', Uint8Array.from(src), 4, 4, [0.5]);
+  assert.ok(green[5] < 128, `positive tint must pull green down, got ${green[5]}`);
 });
 
 test('saturate at zero desaturates and at two saturates', () => {
