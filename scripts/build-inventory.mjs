@@ -6,16 +6,18 @@
 //
 // Inputs are the files fetched by scripts/fetch-catalogues.mjs plus the Rust
 // registry in src/lib.rs. No compilation happens here.
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 
 const lines = (file) => (existsSync(file) ? readFileSync(file, 'utf8') : '').split('\n').map((s) => s.trim()).filter(Boolean);
 
 const ffmpegVideo = lines('inventory/ffmpeg-video-filters.txt');
 const opencvFns = lines('inventory/opencv-imgproc-fns.txt');
 const registryNames = [...readFileSync('src/lib.rs', 'utf8').matchAll(/Def \{ name: "([a-z0-9_]+)"/g)].map((m) => m[1]);
-// Derived from the test file rather than typed here, so a status can never claim
+// Derived from the test files rather than typed here, so a status can never claim
 // more than CI actually checks.
-const verifiedNames = [...readFileSync('test/kernels.test.mjs', 'utf8').matchAll(/apply\('([a-z0-9_]+)'/g)].map((m) => m[1]);
+const verifiedNames = readdirSync('test')
+  .filter((f) => f.endsWith('.test.mjs'))
+  .flatMap((f) => [...readFileSync(`test/${f}`, 'utf8').matchAll(/(?:apply|checkPoint|checkChannel)\('([a-z0-9_]+)'/g)].map((m) => m[1]));
 
 // W3C "Compositing and Blending Level 1" blend-mode list.
 const BLEND_MODES = [

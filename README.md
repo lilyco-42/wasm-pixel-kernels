@@ -35,10 +35,10 @@ answer changes the moment someone starts porting code instead of algorithms.
 * `catalogued` — named, sourced, not implemented.
 * `registered_ci_smoke` — in the Rust registry, builds in CI, and executes over a test image
   without error. **Not** numerically checked.
-* `verified` — matched against an independent JS reference in `test/kernels.test.mjs`, in CI.
+* `verified` — matched against an independent JS reference in `test/*.test.mjs`, in CI.
 
-The status list is derived from the test file itself, so it cannot drift ahead of what CI
-actually asserts. Current split: 9 `verified`, 57 `registered_ci_smoke`, 420 `catalogued`.
+The status list is derived from the test files themselves, so it cannot drift ahead of what CI
+actually asserts. Current split: 43 `verified`, 23 `registered_ci_smoke`, 420 `catalogued`.
 
 ## ABI
 
@@ -69,7 +69,7 @@ node --test test/kernels.test.mjs
 ## Roadmap
 
 1. ~~Get the registry building and green in CI.~~ Done.
-2. Add numeric references for the remaining 57 `registered_ci_smoke` kernels, then work down the
+2. Add numeric references for the remaining 23 `registered_ci_smoke` kernels, then work down the
    catalogue in priority order: colour/tone (50), composite/geometry (43), blend (35),
    blur/sharpen (25), draw/text (26), edge/detail (12), morphology (10).
 3. AE-side temporal operations (keyframe interpolation, time remap, motion blur over frames) need

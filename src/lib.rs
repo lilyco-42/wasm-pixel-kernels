@@ -295,7 +295,14 @@ fn point_kernel(id: usize, buf: &mut [u8], p: &[f32]) {
                 );
                 r = nr; g = ng; b = nb;
             }
-            "brightness" | "brightness_contrast" => { let d = arg(p, 0, 0.0) * 255.0; r += d; g += d; b += d }
+            "brightness" => { let d = arg(p, 0, 0.0) * 255.0; r += d; g += d; b += d }
+            "brightness_contrast" => {
+                let d = arg(p, 0, 0.0) * 255.0;
+                let c = arg(p, 1, 0.0) + 1.0;
+                for v in [&mut r, &mut g, &mut b] {
+                    *v = (*v + d - 128.0) * c + 128.0;
+                }
+            }
             "contrast" => {
                 let c = arg(p, 0, 0.0) + 1.0;
                 r = (r - 128.0) * c + 128.0; g = (g - 128.0) * c + 128.0; b = (b - 128.0) * c + 128.0;
