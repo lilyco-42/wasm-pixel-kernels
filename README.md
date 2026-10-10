@@ -1,14 +1,14 @@
 # wasm-pixel-kernels
 
-Goal: a catalogue of **â‰?00 everyday Photoshop-retouch / After-Effects-compositing operations**
+Goal: a catalogue of **â‰¥200 everyday Photoshop-retouch / After-Effects-compositing operations**
 available as WebAssembly, behind one uniform ABI.
 
 ## The boundary this project will not pretend away
 
 Adobe's Photoshop and After Effects cores are closed-source proprietary C++. They cannot be
 "compiled to wasm" by anyone outside Adobe. What *is* achievable, and what this repo does, is
-take the **operation vocabulary** those apps made famous â€?curves, levels, blend modes, unsharp
-mask, frequency separation, luma key, premultiply, motion blur â€?and implement or bind each one
+take the **operation vocabulary** those apps made famous â€” curves, levels, blend modes, unsharp
+mask, frequency separation, luma key, premultiply, motion blur â€” and implement or bind each one
 from a public, citable catalogue.
 
 So "200 modules" here means 200 named operations with a documented reference, not 200 Adobe
@@ -24,7 +24,7 @@ binaries. `inventory/modules.json` lists every row with its source.
 | `src/lib.rs` | this crate's own registry | 65 |
 
 After de-duplication that yields **485 modules** (`node scripts/build-inventory.mjs`
-asserts the â‰?00 floor, and CI re-runs it so the number cannot rot).
+asserts the â‰¥200 floor, and CI re-runs it so the number cannot rot).
 
 Only operation *names and semantics* are taken from ffmpeg/OpenCV; no upstream code is copied.
 That keeps the LGPL/Apache questions out of the current scope, and it is flagged because the
@@ -32,10 +32,10 @@ answer changes the moment someone starts porting code instead of algorithms.
 
 ## Status vocabulary (deliberately unforgiving)
 
-* `catalogued` â€?named, sourced, not implemented.
-* `registered_ci_smoke` â€?in the Rust registry, builds in CI, and executes over a test image
+* `catalogued` â€” named, sourced, not implemented.
+* `registered_ci_smoke` â€” in the Rust registry, builds in CI, and executes over a test image
   without error. **Not** numerically checked.
-* `verified` â€?matched against an independent JS reference in `test/*.test.mjs`, in CI.
+* `verified` â€” matched against an independent JS reference in `test/*.test.mjs`, in CI.
 
 The status list is derived from the test files themselves, so it cannot drift ahead of what CI
 actually asserts. Current split: **65 `verified`** (the whole registry), 420 `catalogued`.
